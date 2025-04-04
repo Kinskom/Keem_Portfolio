@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdihakim Hassan Noor - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+
+    <nav class="tabs">
+        <a href="#greeting">Greeting</a>
+        <a href="#more">More</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Professional Journey</a>
+        <a href="#education">Education</a>
+        <a href="#work">Work History</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+
+    <div class="content">
+        <img src="image/kims.jpg" alt="Abdihakim Hassan Noor" class="profile-img">
+        
+        <section id="greeting">
+            <h2>Home</h2>
+            <p>Hello! I am Abdihakim Hassan Noor, and I am delighted to welcome you to my professional portfolio.</p>
+        </section>
+        
+        <section id="more">
+            <h2>More</h2>
+            <p>Here, you will find details about my skills, experiences, and projects that showcase my expertise.</p>
+        </section>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am passionate about web development and committed to crafting visually appealing and efficient websites.</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <img src="image/IT.png" alt="Skills" class="skills-img">
+        
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>Frontend Frameworks</li>
+            </ul>
+        </section>
+        
+        <section id="journey">
+            <h2>Professional Journey</h2>
+            <p>Over the years, I have aspired to be in Software Engineering and it is through PLP that I enhanced my development skills and problem-solving abilities.</p>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>Bachelor's Degree in Food Science</strong> - JKUAT</p>
+            <p>Additional Certifications: Nutritionist</p>
+        </section>
+
+        <section id="work">
+            <h2>Work History</h2>
+            <p><strong>DIRECTOR</strong> - KIMZAM ENERGY LIMITED (2020 - Present)</p>
+            <p>Overseeing All Company Activities.</p>
+            <p><strong>Manager</strong> - Atlas Petroleum (2017 - 2020)</p>
+            <p>Running and Managing Day to Day Affairs.</p>
+        </section>
+        
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="project">
+                <h3>Learn The Basics</h3>
+                <p>This is the first step into my programming journey, and today I can say I am proud to be a member of PLP.</p>
+            </div>
+            <div class="project">
+                <h3>Where I See Myself Next</h3>
+                <p>In the long run, I aim to reach the highest level I can in both AI and Data Analysis.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Abdihakim Hassan Noor ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        const starContainer = document.querySelector('.stars');
+        const numStars = 100;
+
+        function createStars() {
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.top = `${Math.random() * window.innerHeight}px`;
+                star.style.left = `${Math.random() * window.innerWidth}px`;
+                starContainer.appendChild(star);
+            }
+        }
+
+        createStars();
+    </script>
+</body>
+</html>
